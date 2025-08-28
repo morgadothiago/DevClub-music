@@ -136,3 +136,57 @@ body {
   border: 1px solid #1db954;
   transition: 0.3s all ease;
 }
+main {
+  padding: 24px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #242424;
+  padding: 8px 16px;
+  border-radius: 20px;
+  width: 300px;
+  gap: 10px;
+  border: 1px solid transparent; /* borda padrão invisível */
+  transition: border 0.3s ease; /* transição suave */
+}
+
+.search-bar input {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  width: 100%;
+  outline: none; /* remove a borda azul padrão */
+}
+
+.search-bar:focus-within {
+  border: 1px solid #1db954; /* borda verde em toda a div */
+}
+.artists-grid,
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  margin-bottom: 40px;
+  gap: 24px;
+}
+
+.artist-card,
+.album-card {
+  background-color: #181818;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.artist-card:hover,
+.album-card:hover {
+  background-color: #282828;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+}

@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const albumData = [
     {
       name: "White Noise (Sleep & Relaxation Sounds)",
-      image: "./img/album-white-nois.jpg",
+      image: "./img/album-white-noise.jpg",
       artist: "Sleep John",
     },
     {
@@ -63,4 +63,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const artistGrid = document.querySelector(".artists-grid")
   // selecionado a div com a classe album-grid
   const albumGrid = document.querySelector(".album-grid")
+
+  /**
+   * Aqui esta percorendo a array de objeto e gravando valor na variavel artist
+   * criando uma variavel e indo procurar na dom e criando um elemento
+   * pegando o elemento criado e adicionando uma class
+   * depois que adicionamos a class estamos criando a estrutura do html usando o innerHTML
+   * e depois mostando em tela com o appendChild
+   */
+  artistaData.forEach((artist) => {
+    const artistCard = document.createElement("div")
+    artistCard.classList.add("artist-card")
+    artistCard.innerHTML = `
+      <img src="${artist.image}" alt="${artist.name}" />
+      <h3>${artist.name}</h3>
+      <p>artista</p>
+    `
+    artistGrid.appendChild(artistCard)
+  })
+
+  albumData.forEach((album) => {
+    const albumCard = document.createElement("div")
+    albumCard.classList.add("album-card")
+
+    albumCard.innerHTML = `
+      <img src="${album.image}" alt="${album.artist}" />
+      <h3>${album.name}</h3>
+      <p>${album.artist}</p>
+    
+    `
+
+    albumGrid.appendChild(albumCard)
+  })
 })
