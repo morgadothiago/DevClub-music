@@ -181,6 +181,9 @@ main {
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .artist-card:hover,
 .album-card:hover {
@@ -189,4 +192,64 @@ main {
   border-radius: 8px;
   text-align: center;
   cursor: pointer;
+}
+.artist-card img,
+.album-card img {
+  width: 100%;
+  max-height: 70%;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+.artist-card h3,
+.album-card h3 {
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.artist-card p,
+.album-card p {
+  font-size: 10px;
+  color: #b7b3b6;
+}
+
+.content {
+  margin-top: 40px;
+}
+.content h2 {
+  margin-bottom: 10px;
+}
+.banner {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(90deg, #1db954, #1ed760);
+  padding: 8px 14px;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner h2 {
+  font-size: 14px;
+}
+
+.banner p {
+  font-size: 10px;
+}
+
+.banner button {
+  background-color: #000;
+  color: #1ed760;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+}
+.banner button:hover {
+  background-color: #1ed760;
+  color: #000;
+  transition: 0.3s all ease;
 }
