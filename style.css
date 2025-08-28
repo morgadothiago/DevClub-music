@@ -253,3 +253,12 @@ main {
   color: #000;
   transition: 0.3s all ease;
 }
+
+@media (max-width: 768px) {
+  body {
+    background-color: red;
+  }
+  .sidebar {
+    display: none;
+  }
+}
